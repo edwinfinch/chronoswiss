@@ -76,6 +76,14 @@ const struct GPathInfo HAND_PATHS[AMOUNT_OF_HANDS] = {
 	    {4,  -40},
 	  }
   },
+  { //Hour hand
+  	  .num_points = 3,
+	  .points = (GPoint[]) {
+	    {4, 0},
+	    {-4, 0},
+	    {4,  -40},
+	  }
+  },
   { //Minute hand
   	  .num_points = 3,
 	  .points = (GPoint[]) {
@@ -83,7 +91,7 @@ const struct GPathInfo HAND_PATHS[AMOUNT_OF_HANDS] = {
 	    {-8, 0},
 	    {8,  -80},
 	  }
-  },
+  }
   /*
   { //Hour hand
     .num_points = 19,
@@ -110,14 +118,6 @@ const struct GPathInfo HAND_PATHS[AMOUNT_OF_HANDS] = {
     }
   },
   */
-  { //Hour hand
-  	  .num_points = 3,
-	  .points = (GPoint[]) {
-	    {4, 0},
-	    {-4, 0},
-	    {4,  -40},
-	  }
-  }
 };
 
 void chro_update_proc(Layer *layer, GContext *ctx){

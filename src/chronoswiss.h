@@ -3,8 +3,8 @@
 
 typedef enum HandType {
 	HAND_TYPE_SECOND,
-	HAND_TYPE_MINUTE,
-	HAND_TYPE_HOUR
+	HAND_TYPE_HOUR,
+	HAND_TYPE_MINUTE
 } HandType;
 
 void chro_tick_handler(struct tm *t, TimeUnits unit);
