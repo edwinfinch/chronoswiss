@@ -6,6 +6,9 @@ GBitmap *chrono_bitmap;
 BitmapLayer *chrono_background;
 Layer *chro_main_layer;
 GPath *paths[AMOUNT_OF_HANDS];
+#ifdef INVERTED
+	InverterLayer *theme;
+#endif
 
 const struct GPathInfo HAND_PATHS[AMOUNT_OF_HANDS] = {
 	/*
@@ -172,6 +175,11 @@ void chro_window_load(Window *window){
 	chro_main_layer = layer_create(GRect(0, 0, 144, 168));
 	layer_set_update_proc(chro_main_layer, chro_update_proc);
 	layer_add_child(window_layer, chro_main_layer);
+	
+	#ifdef INVERTED
+		theme = inverter_layer_create(GRect(0, 0, 144, 168));
+		layer_add_child(window_layer, inverter_layer_get_layer(theme));
+	#endif
 	
 	struct tm *t;
   	time_t temp;        

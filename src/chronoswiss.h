@@ -1,5 +1,6 @@
 #pragma once
 #define AMOUNT_OF_HANDS 3
+#define INVERTED false
 
 typedef enum HandType {
 	HAND_TYPE_SECOND,
